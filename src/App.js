@@ -49,7 +49,7 @@ class App extends React.Component {
       products: this.state.products
         .slice()
         .sort((a, b) =>
-          sort === "lowset"
+          sort === "lowest"
             ? a.price > b.price
               ? 1
               : -1
@@ -67,7 +67,7 @@ class App extends React.Component {
     console.log(event.target.value);
 
     if (event.target.value === "") {
-      this.setState({ size: event.target.value, product: data.products });
+      this.setState({ size: event.target.value, products: data.products });
     } else {
       this.setState({
         size: event.target.value,
